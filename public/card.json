@@ -1,0 +1,206 @@
+[
+  {
+    "id": 1,
+    "icon": "https://img.icons8.com/color/48/react-native.png",
+    "iconTitle": "React",
+    "title": "React",
+    "badge": "Popular",
+    "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#EFF6FF",
+      "textColor": "#0284C7",
+      "borderColor": "#BAE6FD"
+    }
+  },
+  {
+    "id": 2,
+    "icon": "https://img.icons8.com/color/48/vue-js.png",
+    "iconTitle": "Vue.js",
+    "title": "Vue.js",
+    "badge": "Versatile",
+    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.8,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#ECFDF5",
+      "textColor": "#059669",
+      "borderColor": "#A7F3D0"
+    }
+  },
+  {
+    "id": 3,
+    "icon": "https://img.icons8.com/doodle/48/svetle.png",
+    "iconTitle": "Svelte",
+    "title": "Svelte",
+    "badge": "Fast",
+    "description": "A cybernetically enhanced web application compiler that builds highly optimized web experiences.",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#FFF7ED",
+      "textColor": "#F97316",
+      "borderColor": "#FED7AA"
+    }
+  },
+  {
+    "id": 4,
+    "icon": "https://img.icons8.com/color/48/nextjs.png",
+    "iconTitle": "Next.js",
+    "title": "Next.js",
+    "badge": "Full-Stack",
+    "description": "A React framework for building full-stack web applications with hybrid static and server rendering.",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#F5F3FF",
+      "textColor": "#7C3AED",
+      "borderColor": "#DDD6FE"
+    }
+  },
+  {
+    "id": 5,
+    "icon": "https://img.icons8.com/color/48/nodejs.png",
+    "iconTitle": "Node.js",
+    "title": "Node.js",
+    "badge": "Standard",
+    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "category": "Backend",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#ECFDF5",
+      "textColor": "#059669",
+      "borderColor": "#A7F3D0"
+    }
+  },
+  {
+    "id": 6,
+    "icon": "https://img.icons8.com/color/48/postgreesql.png",
+    "iconTitle": "PostgreSQL",
+    "title": "PostgreSQL",
+    "badge": "Top SQL",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#EFF6FF",
+      "textColor": "#2563EB",
+      "borderColor": "#BFDBFE"
+    }
+  },
+  {
+    "id": 7,
+    "icon": "https://img.icons8.com/color/48/redis.png",
+    "iconTitle": "Redis",
+    "title": "Redis",
+    "badge": "Cache",
+    "description": "An in-memory data structure store used as a high-speed database, cache, and message broker.",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#FEF2F2",
+      "textColor": "#EF4444",
+      "borderColor": "#FECACA"
+    }
+  },
+  {
+    "id": 8,
+    "icon": "https://img.icons8.com/color/48/javascript--v1.png",
+    "iconTitle": "JavaScript",
+    "title": "JavaScript",
+    "badge": "Ubiquitous",
+    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "category": "Language",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#FFFBEB",
+      "textColor": "#D97706",
+      "borderColor": "#FDE68A"
+    }
+  },
+  {
+    "id": 9,
+    "icon": "https://img.icons8.com/color/48/typescript.png",
+    "iconTitle": "TypeScript",
+    "title": "TypeScript",
+    "badge": "Essential",
+    "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "category": "Language",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#EFF6FF",
+      "textColor": "#0284C7",
+      "borderColor": "#BAE6FD"
+    }
+  },
+  {
+    "id": 10,
+    "icon": "https://img.icons8.com/color/48/java-coffee-cup-logo.png",
+    "iconTitle": "Java",
+    "title": "Java",
+    "badge": "Robust",
+    "description": "A secure, object-oriented programming language designed for portability and scale.",
+    "category": "Language",
+    "level": "Intermediate",
+    "rating": 4.7,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#EFF6FF",
+      "textColor": "#0284C7",
+      "borderColor": "#BAE6FD"
+    }
+  },
+  {
+    "id": 11,
+    "icon": "https://img.icons8.com/color/48/tailwindcss.png",
+    "iconTitle": "Tailwind CSS",
+    "title": "Tailwind CSS",
+    "badge": "Modern",
+    "description": "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#ECFEFF",
+      "textColor": "#0891B2",
+      "borderColor": "#A5F3FC"
+    }
+  },
+  {
+    "id": 12,
+    "icon": "https://img.icons8.com/color/48/docker.png",
+    "iconTitle": "Docker",
+    "title": "Docker",
+    "badge": "Containers",
+    "description": "A platform designed to build, share, and run containerized applications reliably.",
+    "category": "DevOps",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "ratingIcon": "star",
+    "badgeStyle": {
+      "backgroundColor": "#EFF6FF",
+      "textColor": "#0284C7",
+      "borderColor": "#BAE6FD"
+    }
+  }
+]

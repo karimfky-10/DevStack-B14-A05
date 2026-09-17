@@ -1,31 +1,39 @@
-import type { CardTypeProps } from "./cardType"
+import type { CardTypeProps,} from "./cardType"
 
-interface PropsItems{
-    props:Promise<CardTypeProps[]>
-}
-export default function CardDiv({props}:PropsItems) {
+// interface PropsItems{
+//     props:Promise<CardTypeProps[]>
+// }
 
+export default function CardDiv({props}:{props:CardTypeProps[]}) {
     return (
         <div className="grid grid-cols-3 gap-3 w-3/4">
         {
-            props.map((items:PropsItems)=>{
+            props.map((items:CardTypeProps)=>{
                 return(       
-            <div className="mt-10 border border-olive-400 rounded-2xl bg-white">
-               <div className=" p-5">
+            <div
+             key={items.id} 
+             className="mt-10 border border-olive-400 rounded-2xl bg-white ">
+               <div className=" p-7">
              <div className="flex justify-between">
                 <img src={items.icon } alt="" />
-            <button className="bg-[items.badgeStyle.backgroundColor] rounded-2xl px-2">{items.badge}</button>
+            <div style={{
+                backgroundColor: items.badgeStyle.backgroundColor,
+                color:items.badgeStyle.textColor,
+                borderColor: items.badgeStyle.borderColor
+            }}
+            className="rounded-2xl text-md px-2 border h-7"
+            >{items.badge}</div>
              </div>
-             <h1 className="text-xl font-bold mt-3">{items.title}</h1>
-             <p className="mt-5 mb-3">A declarative, component-based
+             <h1 className="text-2xl font-bold mt-2 ">{items.title}</h1>
+             <p className="mt-4 mb-3">A declarative, component-based
                 JavaScript library for building modern user
                 interfaces.</p>
-             <div className="flex justify-between items-center m-3">
+             <div className="flex justify-between items-center m-3 mt-7 ">
                 <button>{items.category}</button> 
                 <p>{items.level}</p>
 
-                <div>
-                    <img src="#" alt="" />
+                <div className="flex justify-between items-center gap-1">
+                    <img className="w-4 h-4" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star" />
                     <li className="list-none">{items.rating}</li>                    
                 </div>
              </div>
