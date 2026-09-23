@@ -1,18 +1,23 @@
+import Button1 from "./button"
 import type { CardTypeProps,} from "./cardType"
 
-// interface PropsItems{
-//     props:Promise<CardTypeProps[]>
-// }
+interface IProps{
+    props:CardTypeProps[]
+    Add:boolean,
+    handleClick: ()=> void
+}
 
-export default function CardDiv({props}:{props:CardTypeProps[]}) {
+export default function CardItems({props, Add, handleClick}:IProps) {
+
     return (
-        <div className="grid grid-cols-3 gap-3 w-3/4">
-        {
-            props.map((items:CardTypeProps)=>{
+        <div className="grid grid-cols-3 gap-5">
+            {
+              props.map((items:CardTypeProps)=>{
+
                 return(       
             <div
              key={items.id} 
-             className="mt-10 border border-olive-400 rounded-2xl bg-white ">
+             className=" border border-olive-400 rounded-2xl bg-white ">
                <div className=" p-7">
              <div className="flex justify-between">
                 <img src={items.icon } alt="" />
@@ -37,13 +42,17 @@ export default function CardDiv({props}:{props:CardTypeProps[]}) {
                     <li className="list-none">{items.rating}</li>                    
                 </div>
              </div>
-             <button className="text-white bg-black w-full h-8 rounded-sm">Add to Stack</button>
+                <div>
+            <Button1 Add={Add} handleClick={handleClick}  ></Button1>
+
+                </div>
+                
             </div>
            </div>
                     
                 )
             })
-        }      
+        }
         </div>
     )
 }

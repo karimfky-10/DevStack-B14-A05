@@ -2,8 +2,9 @@ import logo from "../assets/logo-text.png"
 export default function Nav(){
     return(
         
+        <div className="sticky top-0  bg-white">
 
-        <div className="flex justify-between my-10   items-center">
+        <div className="flex justify-between my-7 items-center  ">
 
             <img src={logo}/>
             <ul className="flex gap-10 text-xl font  ">
@@ -19,7 +20,9 @@ export default function Nav(){
                 <button className="bg-[#DB2777] w-28 h-10 rounded-4xl text-white ">Sign Up</button>
             </div>
          </div>
+            <div className="border-b border-gray-300"></div>
         
+        </div>
         
     )
 }
