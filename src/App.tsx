@@ -1,8 +1,8 @@
 import Hero from "./Component/hero"
-import { Card } from "./Component/Main/card"
 import Nav from "./Component/nav"
 import type { CardTypeProps } from "./Component/cardType";
 import { Suspense } from "react";
+import Card from "./Component/Main/card"
 
 const cardPromis = async():Promise<CardTypeProps[]> => {
   const res = await fetch('./card.json');
