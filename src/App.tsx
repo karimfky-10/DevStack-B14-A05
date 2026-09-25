@@ -4,6 +4,7 @@ import type { CardTypeProps } from "./Component/cardType";
 import { Suspense } from "react";
 import Card from "./Component/Main/card"
 import Footer from "./Component/footer";
+import { ToastContainer } from "react-toastify";
 
 const cardPromis = async():Promise<CardTypeProps[]> => {
   const res = await fetch('./card.json');
@@ -22,6 +23,7 @@ function App() {
       <Card CardPromis={CardPromis}></Card> 
        </Suspense>
         <Footer></Footer>
+        <ToastContainer></ToastContainer>
     </div>
   
   )

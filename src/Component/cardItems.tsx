@@ -1,5 +1,7 @@
 
+import { Bounce } from "react-toastify/unstyled";
 import type { CardTypeProps } from "./cardType";
+import { toast } from "react-toastify";
 
 interface IProps {
   props: CardTypeProps;
@@ -15,11 +17,33 @@ interface IProps {
 }
 
 export default function CardItems({
+
   props,
   handleClick,
   isAdded,
 }: IProps) {
+function handleClick2 (
+    id: number,
+    icon: string,
+    title: string,
+    category: string
+) {
+handleClick(id, icon, title, category);
+if (!isAdded) {
+toast.success(`${props.title} added successfully!`, {
+position: "bottom-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
 
+});
+}
+}
   return (
     <div className="mt-3 h-full border border-olive-200 rounded-2xl bg-white">
 
@@ -95,7 +119,7 @@ export default function CardItems({
         {/* Add / Added Button */}
         <button
           onClick={() =>
-            handleClick(
+            handleClick2(
               props.id,
               props.icon,
               props.title,

@@ -29,6 +29,7 @@ export default function Card({ CardPromis }: IType) {
     title: string,
     category: string
   ) {
+
     const alreadyAdded = add.some((item) => item.id === id);
 
     if (alreadyAdded) {
