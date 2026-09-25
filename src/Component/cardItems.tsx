@@ -85,7 +85,7 @@ export default function CardItems({
 }: IProps) {
 
   return (
-    <div className="border border-olive-200 rounded-2xl bg-white">
+    <div className="mt-3 border border-olive-200 rounded-2xl bg-white">
 
       <div className="p-7">
 

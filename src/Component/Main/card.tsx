@@ -1,78 +1,10 @@
 
-// interface IType{
-//     CardPromis: Promise<CardTypeProps[]>
-// }
-// interface AddCard{
-//     id: number,
-//     icon: string,
-//     title: string,
-//     category: string
-// }
-
-// export default function Card({CardPromis}:IType) {
-//     const cards = use(CardPromis)
-//     const [Add,setAdd] = useState<AddCard[]>([])
-//     function handleClick(id: string,icon: string, title: string,category:string){
-//         const nweItems= {
-//             id: id,
-//             icon: icon,
-//             title: title,
-//             category:category,
-//         }
-//         const alrediAded = Add.some((item)=> item.id == id)
-//         if (alrediAded){
-//             setAdd((prev)=> prev.filter(()))
-//         }
-//         setAdd( [...Add , nweItems])
-//         function removed (){
-//             setAdd([])
-//         }
-//     }
-// console.log(Add)
-//     return (
-//      <div className="mt-5xl  ">
-//         {/* Top Site */}
-//         <div>
-//             <h1 className="text-5xl  font-bold">Explore the <span 
-//             className="bg-gradient-to-r from-[#EC4899] to-[#8B5CF6]
-//             bg-clip-text text-transparent
-//              ">Technologies</span></h1>
-//             <p className=" my-3 text-xl">Pick one technology per category to buijld your ideal stack.</p>
-            
-//             {/* main card */}
-//         </div>
-
-//         {/* main saction */}
-//         <div className="flex justify-between gap-7 mt-10">
-//             {/* Cards items */}
-//         <div className=" grid grid-cols-3 justify-between gap-7">
-//                     {cards.map((items)=> 
-//             <div key={items.id}>
-
-//             <CardItems props={items} handleClick={ handleClick }></CardItems> 
-//             </div>
-//         )}
-//         </div>
-//         {/* Stack site */}
-//         <div className=" w-3xl ">
-//             {
-//               !Add ==[] ? <StackAfter   add={Add} ></StackAfter>:
-//             <StackBefore></StackBefore>
-//             }
-//         </div> 
-//         </div>
-       
-//     </div>
-
-//     )
-// }
-
-
 
 import { use, useState } from "react";
 import type { CardTypeProps } from "../cardType";
 import StackAfter from "./StackAfter";
 import CardItems from "../cardItems";
+import StackBefore from "./StackBefore";
 
 interface IType {
   CardPromis: Promise<CardTypeProps[]>;
@@ -131,11 +63,12 @@ export default function Card({ CardPromis }: IType) {
   }
 
   return (
-    <div className="mt-5xl">
+    <div className="px-4">
 
       {/* Top Site */}
       <div>
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-2xl text-center md:text-start
+         lg:text-start md:text-4xl lg:text-5xl font-bold">
           Explore the{" "}
           <span
             className="
@@ -150,23 +83,25 @@ export default function Card({ CardPromis }: IType) {
           </span>
         </h1>
 
-        <p className="my-3 text-xl">
+        <p className="text-center text-sm lg:text-start md:text-start text-olive-500 lg:my-3 lg:text-xl md:text-xl md:my-2.5">
           Pick one technology per category to build your ideal stack.
         </p>
       </div>
 
 
       {/* Main Section */}
-      <div className="flex justify-between gap-7 mt-10">
+      <div className="
+      md:flex md:justify-between md:gap-7
+      lg:flex lg:justify-between lg:gap-7 mt-10">
 
         {/* Cards */}
-        <div className="grid grid-cols-3 justify-between gap-7">
+        <div className="px-4  lg:grid lg:grid-cols-3 lg:justify-between lg:gap-7
+        md:grid md:grid-cols-2 md:justify-between md:gap-7">
 
           {cards.map((items) => (
             <div key={items.id}>
 
               <CardItems
-                add={add}
                 props={items}
                 handleClick={handleClick}
                 isAdded={add.some(
@@ -181,13 +116,15 @@ export default function Card({ CardPromis }: IType) {
 
 
         {/* Your Stack */}
-        <div className="w-3xl">
+        <div className="px-4 mt-5 md:w-3xl lg:w-3xl">
+          {
 
-          <StackAfter
+            add.length===0?<StackBefore></StackBefore> :<StackAfter
             add={add}
             handleRemove={handleRemove}
             handleAllRemove={handleAllRemove}
-          />
+            />
+          }
 
         </div>
 
